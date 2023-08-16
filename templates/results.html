@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="main">
+  <div class="title">
+    <h3>Diabetic Retinopathy Detection Results</h3>
+  </div>
+
+  <div class="result">
+    <p>Prediction: {{ result }}</p>
+    <p>Probability: {{ probability }}</p>
+  </div>
+
+  <!-- You can add your graphs and styling here -->
+</div>
+
+{% endblock %}

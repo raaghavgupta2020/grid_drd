@@ -29,6 +29,8 @@ from models.model import build_model, preprocess_image
 # Some utilites
 import numpy as np
 from utils import base64_to_pil
+from flask_sqlalchemy import SQLAlchemy
+import openai
 
 
 # Creating a new Flask Web application.
@@ -38,11 +40,31 @@ app = Flask(__name__)
 MODEL_PATH = './models/pretrained/model.h5'
 # MODEL_PATH = './models/pretrained/DenseNet-BC-121-32-no-top.h5'
 
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:raghavguptapostgresql@localhost:5432/diabeticRetinopathy'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+
+# db.init_app(app)
+
+with app.app_context():
+    db.create_all()
 
 # Loading trained model
 model = build_model()
 model.load_weights(MODEL_PATH)
 print('Model loaded. Start serving...')
+
+openai.api_key = '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'
+
+class PredictedData(db.Model):
+    __tablename__ = 'predicted_data'
+    id = db.Column(db.Integer, primary_key=True)
+    image_data = db.Column(db.String, nullable=False)
+    result = db.Column(db.String, nullable=False)
+    probability = db.Column(db.Float, nullable=False)
+
+    def __repr__(self):
+        return f"<PredictedData(id={self.id}, result='{self.result}', probability={self.probability})>"
 
 
 def model_predict(img, model):
@@ -103,6 +125,25 @@ def predict():
         return jsonify(result=result, probability=pred_proba)
 
     return None
+
+@app.route('/save_to_database', methods=['POST'])
+def save_to_database():
+    data = request.json.get('data')
+    print(data)
+    filename = request.json.get('filename')
+    print(filename)
+
+    # Save data to the database
+    new_data = PredictedData(image_data=filename, result=data['result'], probability=data['probability'])
+    db.session.add(new_data)
+    db.session.commit()
+
+    return jsonify(message='Data saved to the database')
+
+@app.route('/data_table', methods=['GET'])
+def data_table():
+    data = PredictedData.query.all()
+    return render_template('data_table.html', data=data)
 
 
 if __name__ == '__main__':

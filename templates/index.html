@@ -9,7 +9,7 @@
   </div>
 
   <div class="panel">
-    <input id="file-upload" class="hidden" type="file" accept="image/x-png,image/gif,image/jpeg" />
+    <input id="file-upload" class="hidden" type="file" accept="image/x-png,image/gif,image/jpeg" multiple/>
     <label for="file-upload" id="file-drag" class="upload-box">
       <div id="upload-caption">Drop image here or click to select</div>
       <img id="image-preview" class="hidden" />
@@ -28,6 +28,7 @@
     <svg id="loader" class="hidden" viewBox="0 0 32 32" width="32" height="32">
       <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
     </svg>
+    <a href="{{ url_for('data_table') }}">View Results</a>
   </div>
 </div>
 

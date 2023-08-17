@@ -42,22 +42,89 @@ var predResult2 = document.getElementById("pred-result-2");
 //========================================================================
 // Main button events
 //========================================================================
-
+/*
 function submitImage() {
-  // action for the submit button
   console.log("submit");
+  const selectedFiles = fileSelect.files;
+  console.log(selectedFiles);
+  if (!selectedFiles || selectedFiles.length === 0) {
+    window.alert("Please select one or more images before submit.");
+    return;
+  }
+  loader.classList.remove("hidden");
+  imageDisplay.classList.add("loading");
+  const imagesArray = [];
+  console.log(typeof(imagesArray));
+  for (let i = 0; i < selectedFiles.length; i++) {
+    const reader = new FileReader();
+    reader.onload = function(event) {
+      console.log("here1");
+      imagesArray.push(event.target.result);
 
-  if (!imageDisplay.src || !imageDisplay.src.startsWith("data")) {
-    window.alert("Please select an image before submit.");
+    };
+    reader.readAsDataURL(selectedFiles[i]);
+    console.log("here2");
+  }
+  console.log("here3");
+  console.log(typeof(imagesArray));
+  // console.log(imagesArray.value[0]);
+  console.log(imagesArray);
+
+}
+*/
+
+async function loadImageData(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+
+    reader.onload = function(event) {
+      resolve(event.target.result);
+    };
+
+    reader.onerror = function(event) {
+      reject(event.error);
+    };
+
+    reader.readAsDataURL(file);
+  });
+}
+
+async function submitImage() {
+  console.log("submit");
+  const selectedFiles = fileSelect.files;
+  console.log(selectedFiles);
+  
+  if (!selectedFiles || selectedFiles.length === 0) {
+    window.alert("Please select one or more images before submit.");
     return;
   }
 
   loader.classList.remove("hidden");
   imageDisplay.classList.add("loading");
 
-  // call the predict function of the backend
-  predictImage(imageDisplay.src);
+  const imagesArray = [];
+  console.log(typeof(imagesArray));
+
+  for (let i = 0; i < selectedFiles.length; i++) {
+    try {
+      const imageData = await loadImageData(selectedFiles[i]);
+      console.log("here1");
+      imagesArray.push(imageData);
+    } catch (error) {
+      console.error("Error loading image:", error);
+    }
+    console.log("here2");
+  }
+
+  console.log("here3");
+  console.log(typeof(imagesArray));
+  console.log(imagesArray[0]);
+  
+  for (let i = 0; i < imagesArray.length; i++) {
+    predictImage(imagesArray[i],selectedFiles[i]);
+  }
 }
+// Call the async function when needed, for example, on a button click
 
 function clearImage() {
   // reset selected files
@@ -105,7 +172,7 @@ function previewFile(file) {
 // Helper functions
 //========================================================================
 
-function predictImage(image) {
+function predictImage(image,file) {
   fetch("/predict", {
     method: "POST",
     headers: {
@@ -116,14 +183,30 @@ function predictImage(image) {
     .then(resp => {
       if (resp.ok)
         resp.json().then(data => {
+          console.log("here1");
           console.log(data);
           displayResult(data);
+          console.log("here2");
+          saveToDatabase(data, file.name);
         });
     })
     .catch(err => {
       console.log("An error occured", err.message);
       window.alert("Oops! Something went wrong.");
     });
+}
+
+function saveToDatabase(data, filename) {
+  fetch("/save_to_database", {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ data, filename })
+  })
+  .catch(err => {
+      console.log("An error occurred while saving to the database", err.message);
+  });
 }
 
 function displayImage(image, id) {

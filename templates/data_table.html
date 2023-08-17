@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+  <table>
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Result</th>
+        <th>Probability</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for entry in data %}
+        <tr>
+          <!-- <td><img src="{{ url_for('static', filename='uploads/' + entry.image_data) }}" width="100"></td> -->
+          <td>{{ entry.image_data }}</td>
+          <td>{{ entry.result }}</td>
+          <td>{{ entry.probability }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

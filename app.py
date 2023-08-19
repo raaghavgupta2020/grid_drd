@@ -117,6 +117,11 @@ def index():
     # Main page
     return render_template('index.html')
 
+@app.route('/home', methods=['GET'])
+def home():
+    # home page
+    return render_template('home.html')
+
 
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():

@@ -1,42 +1,105 @@
 {% extends "base.html" %} {% block content %}
 
-<div class="main">
-  <div class="title">
-    <h3>Diabetic Retinopathy Detection</h3>
-    <!-- <p>
-      <small>A web app demo</small>
-    </p> -->
-  </div>
-
-  <div class="panel">
-    <input id="file-upload" class="hidden" type="file" accept="image/x-png,image/gif,image/jpeg" multiple/>
-    <label for="file-upload" id="file-drag" class="upload-box">
-      <div id="upload-caption">Drop image here or click to select</div>
-      <img id="image-preview" class="hidden" />
-    </label>
-  </div>
-
-  <div style="margin-bottom: 2rem;">
-    <input type="button" value="Submit" class="button" onclick="submitImage();" />
-    <input type="button" value="Clear" class="button" onclick="clearImage();" />
-  </div>
-
-  <div id="image-grid" class="image-grid"></div>
-
-  <div id="image-box">
-    <img id="image-display" />
-    <div id="pred-result" class="hidden"></div>
-    <div id="pred-result-2" class="hidden"></div>
-    <svg id="loader" class="hidden" viewBox="0 0 32 32" width="32" height="32">
-      <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
-    </svg>
-    <br>
-    <br>
-    <br>
-    <a href="{{ url_for('data_table') }}">View Results</a>
-    <span>  ||  </span>
-    <a href="{{ url_for('view_graphs') }}">View Graphs</a>
-  </div>
-</div>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SecLyzer is a vulnerabilities scanner.">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename='assets/img/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='assets/img/favicon.ico') }}">
+    
+    <link href="{{ url_for('static', filename='landing.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css'>
+  
+  
+  </head>
+  
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top ">
+      <div class="container d-flex align-items-center justify-content-between">
+        <h1 class="logo"><a href="index.html">Retinalizer AI</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo"><img src="{{ url_for('static', filename='assets/img/seclyzer.png') }}" alt="" class="img-fluid"></a> -->
+  
+        <!-- <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+            <li><a class="nav-link scrollto" href="#about">About</a></li>
+            <li><a class="nav-link scrollto" href="#team">Team</a></li>
+            
+            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>.navbar -->
+  
+      </div>
+    </header><!-- End Header -->
+  
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+  
+      <div class="container-fluid" data-aos="fade-up">
+        <div class="row justify-content-center">
+          <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+            <h1>"Eliminate needless blindness"</h1>
+            <h2>For anyone who wants to make healthcare affordable and accurate.</h2>
+            <h2>A tool for doctors to prioritise cases based on the severity of the condition.</h2>
+            <h2>A ML model on the edge, with focus on scalability and interpretability.</h2>
+            <br>
+            <div><a href="/home" class="btn-get-started scrollto">Get Started</a></div>
+          </div>
+          <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
+            <img src="{{ url_for('static', filename='close-up-eye-scanning.jpg') }}" class="img-fluid animated" alt="">
+          </div>
+        </div>
+      </div>
+      
+    </section><!-- End Hero -->
+    <main id="main">
+        <h4 style="color:#000000">Made by Team - HacKtivists</h4>
+      <!-- ======= About Section ======= -->
+      <!-- <section id="about" class="about">
+        <div class="container">
+  
+          <div class="row">
+            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="150">
+              <img src="{{ url_for('static', filename='assets/img/about.jpg') }}" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
+              <h3>About The Project</h3>
+              <p class="fst-italic">
+                Features of SecLyzer
+              </p>
+              <ul>
+                <li><i class="bi bi-circle-fill"></i> Analyze Github, github, pypi and npm repos.</li>
+                <li><i class="bi bi-circle-fill"></i> Perform the scan with repository link.</li>
+                <li><i class="bi bi-circle-fill"></i> Provides the rating for the repository based upon OWASP Top 10
+                  vulnerabilities along with few other vulnerabilities.</li>
+                <li><i class="bi bi-circle-fill"></i> Display snippet of the code having vulnerabilities.</li>
+                <li><i class="bi bi-circle-fill"></i> There might be some vulnerabilities that may be False positives and
+                  We can manually mark those vulnerabilites as false positives or remove them from the detected
+                  vulnerabilities.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>End About Section -->
+  
+    </main>
+    <script src="{{ url_for('static', filename='assets/js/core/jquery.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $(function () {
+        $(document).scroll(function () {
+          var $nav = $("#header");
+          $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        });
+      });
+    </script>
+  </body>
 
 {% endblock %}

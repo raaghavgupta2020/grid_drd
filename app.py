@@ -202,6 +202,41 @@ def generate_response():
         'body': resp.content
     }
 
+@app.route('/get_chart_data', methods=['GET'])
+def get_chart_data():
+    severity_counts = db.session.query(
+        PredictedData.result,
+        db.func.count(PredictedData.result)
+    ).group_by(PredictedData.result).all()
+
+    # Create a dictionary to store severity counts
+    data = {severity: count for severity, count in severity_counts}
+
+    return jsonify(data)
+
+
+@app.route('/view_graphs')
+def view_graphs():
+    return render_template('graphs.html')
+
+
+@app.route('/delete_entry/<int:entry_id>', methods=['DELETE'])
+def delete_entry(entry_id):
+    try:
+        
+        entry_to_delete = PredictedData.query.get(entry_id)
+        if entry_to_delete:
+            db.session.delete(entry_to_delete)
+            db.session.commit()
+            return jsonify(message='Entry deleted successfully'), 200
+        else:
+            return jsonify(message='Entry not found'), 404
+
+    except Exception as e:
+        return jsonify(message='An error occurred', error=str(e)), 500
+
+
+
 
 if __name__ == '__main__':
     # app.run(port=5002, threaded=False)

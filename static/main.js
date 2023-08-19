@@ -24,7 +24,7 @@ function fileSelectHandler(e) {
   var files = e.target.files || e.dataTransfer.files;
   fileDragHover(e);
   for (var i = 0, f; (f = files[i]); i++) {
-    previewFile(f);
+    // previewFile(f);
   }
 }
 
@@ -89,7 +89,7 @@ async function submitImage() {
   console.log("here3");
   console.log(typeof(imagesArray));
   console.log(imagesArray[0]);
-  
+
   for (let i = 0; i < imagesArray.length; i++) {
     predictImage(imagesArray[i],selectedFiles[i]);
   }
@@ -158,7 +158,8 @@ function predictImage(image,file) {
         resp.json().then(data => {
           console.log("here1");
           console.log(data);
-          displayResult(data);
+          // displayResult(data);
+          hide(loader);
           console.log("here2");
           saveToDatabase(data, file.name);
         });
@@ -285,6 +286,12 @@ async function generateImageGrid(imagesArray, selectedFiles) {
 
     const imageName = document.createElement("p");
     imageName.textContent = selectedFiles[i].name;
+
+    // const predictionResult = document.createElement("p");
+    // predictionResult.textContent = "Prediction: " + predictions[i].label;
+
+    // const predictionProbability = document.createElement("p");
+    // predictionProbability.textContent = "Probability: " + predictions[i].probability.toFixed(3);
     
     const imageElement = document.createElement("img");
     imageElement.src = imagesArray[i];
@@ -292,6 +299,8 @@ async function generateImageGrid(imagesArray, selectedFiles) {
 
     imageDiv.appendChild(imageName);
     imageDiv.appendChild(imageElement);
+    // imageDiv.appendChild(predictionResult);
+    // imageDiv.appendChild(predictionProbability);
     imageGrid.appendChild(imageDiv);
 
     // clearImage();

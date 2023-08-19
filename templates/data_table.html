@@ -1,20 +1,43 @@
-{% extends "base.html" %}
-{% block content %}
-  <table>
-    <thead>
+{% extends "base.html" %} {% block content %}
+  <table class="table table-striped table-dark">
+    <thead class="text-primary">
       <tr>
         <th>Image</th>
         <th>Result</th>
         <th>Probability</th>
+        <th>Patient's Name</th>
+        <th>Patient's Age</th>
+        <th>Generate remediation steps</th>
       </tr>
     </thead>
     <tbody>
       {% for entry in data %}
-        <tr>
+        <tr data-existing-result="{{ entry.result }}" data-existing-probability="{{ entry.probability }}">
           <!-- <td><img src="{{ url_for('static', filename='uploads/' + entry.image_data) }}" width="100"></td> -->
           <td>{{ entry.image_data }}</td>
-          <td>{{ entry.result }}</td>
+
+          <td>
+            {% if entry.result == 'Mild' %}
+                <span class="badge badge-warning">Mild</span>
+            {% elif entry.result == 'Severe' %}
+                <span class="badge badge-danger">Severe</span>
+            {% elif entry.result == 'Moderate' %}
+                <span class="badge badge-warning">Moderate</span>
+            {% elif entry.result == 'No DR' %}
+                <span class="badge badge-info">No DR</span>
+            {% endif %}
+          </td>
+          
           <td>{{ entry.probability }}</td>
+          <td>
+            <input type="text" class="input-field" placeholder="Enter name">
+          </td>
+          <td>
+            <input type="text" class="input-field" placeholder="Enter age">
+          </td>
+          <td>
+            <button style="height:30px" class="button btn btn-info" onclick="processRow(this)">Generate instant remediation</button>
+          </td>
         </tr>
       {% endfor %}
     </tbody>

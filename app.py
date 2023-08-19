@@ -31,6 +31,17 @@ import numpy as np
 from utils import base64_to_pil
 from flask_sqlalchemy import SQLAlchemy
 import openai
+from transformers import GPT2LMHeadModel, GPT2Tokenizer
+from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+import torch
+from langchain.chat_models import ChatOpenAI
+from langchain.prompts import PromptTemplate, FewShotPromptTemplate
+from langchain.schema import HumanMessage
+from langchain.prompts.example_selector import LengthBasedExampleSelector
+from os import environ
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 # Creating a new Flask Web application.
@@ -54,7 +65,14 @@ model = build_model()
 model.load_weights(MODEL_PATH)
 print('Model loaded. Start serving...')
 
-openai.api_key = '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'
+# OPENAI_API_KEY = environ.get('OPENAI_API_KEY')
+OPENAI_API_KEY=os.getenv("OPENAI_API_KEY");
+
+# modelllm = GPT2LMHeadModel.from_pretrained('gpt2')
+# tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
+# tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-medium")  # Replace with the actual model name
+# modell = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-medium")
+# generator = pipeline('text-generation', model=modell, tokenizer=tokenizer)
 
 class PredictedData(db.Model):
     __tablename__ = 'predicted_data'
@@ -144,6 +162,45 @@ def save_to_database():
 def data_table():
     data = PredictedData.query.all()
     return render_template('data_table.html', data=data)
+
+# @app.route('/generate_response', methods=['POST'])
+# def generate_response():
+#     data = request.get_json()
+#     input_text = data.get('input_text')
+#     # Tokenize input
+#     input_ids = tokenizer.encode(input_text, return_tensors='pt')
+#     # Generate response
+#     with torch.no_grad():
+#         output = modelllm.generate(input_ids, max_length=200)[0]
+#         response = tokenizer.decode(output, skip_special_tokens=True)
+#     return jsonify({'response': response})
+
+# @app.route('/generate_response', methods=['POST'])
+# def generate_response():
+#     data = request.get_json()
+#     input_text = data.get('input_text')
+#     # Generate response
+#     response = generator(input_text, max_length=150)[0]['generated_text']
+#     return jsonify({'response': response})
+
+
+@app.route("/generate_response",  methods = ['POST'])
+def generate_response():
+    content_type = request.headers.get('Content-Type')
+    prompt = None
+    if (content_type == 'application/json'):
+        json_payload = request.json
+        prompt = json_payload['input_text']
+    else:
+        return 'Content-Type not supported!'
+
+    llm = ChatOpenAI(openai_api_key=OPENAI_API_KEY,temperature=0, model_name='gpt-3.5-turbo')
+    resp = llm([HumanMessage(content=prompt)])
+    
+    return {
+        'statusCode': 200,
+        'body': resp.content
+    }
 
 
 if __name__ == '__main__':

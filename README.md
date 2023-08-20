@@ -34,7 +34,6 @@ venv\Scripts\activate​
 `pip install -r requirements.txt​`
 
 ### 4. Create a database in postgreSQL with name -> "diabeticRetinopathy"
-​
 ### 5. Update the below line -> ​
 
 `app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:<password>@localhost:5432/diabeticRetinopathy'​`
@@ -60,7 +59,17 @@ CREATE TABLE IF NOT EXISTS public.predicted_data​
     CONSTRAINT predicted_data_pkey PRIMARY KEY (id)​
 )​
 ```
-### 8. Create a .env file and create a variable called "OPENAI_API_KEY" and set ​
+### 8. Create a .env file and create a variable called "OPENAI_API_KEY" and enter your openai api key ​
+Refer to this link for the same :​
 
-## Run the Webapp by executing 
-`python app.py`
+`
+https://www.maisieai.com/help/how-to-get-an-openai-api-key-for-chatgpt​
+`
+
+​### 9. Run the Flask application : ​
+
+`python app.py​`
+
+Access the web application by opening your web browser and navigating to `http://localhost:5000`​
+Upload retinal images for classification and view the predicted results, probabilities, and recommendations for remediation.​
+

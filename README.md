@@ -15,18 +15,6 @@ Step 4 : By unifying quantum and classical strengths, our solution offers an exc
 
 #### This novel solution aims to enhance the accuracy, efficiency, and scalability of disease classification, ultimately leading to early diagnosis and improved patient outcomes.​
 ​
-For classification of Diabetic Retinopathy from retinal images : 
-<p align="center">
-  <img src="https://github.com/snsten/Diabetic-Retinopathy-WebApp/blob/master/data/prediction.jpg">
-</p>
-
-## Diabetic Retinopathy
-Diabetic retinopathy is an eye condition that can cause vision loss and blindness in people who have diabetes. It affects blood vessels in the retina.
-
-No Diabetic Retinopathy    |  Severe Diabetic Retinopathy
-:-------------------------:|:-------------------------:
-![](https://github.com/snsten/Diabetic-Retinopathy-WebApp/blob/master/data/no_dr.jpg)  |  ![](https://github.com/snsten/Diabetic-Retinopathy-WebApp/blob/master/data/severe_dr.jpg)
-
 ## Data Description
 
 Dataset consists of retina images taken using fundus photography under a variety of imaging conditions.
@@ -40,26 +28,6 @@ A clinician has rated each image for the severity of diabetic retinopathy on a s
     2 - DR Stage 2
 
     3 - DR Stage 3
-
-## About the Model used for prediction
-### Densely Connected Convolutional Networks or DenseNet 
-
-Dense Convolutional Network (DenseNet), which connects each layer to every other layer in a feed-forward fashion. Whereas traditional convolutional networks with L layers have L connections - one between each layer and its subsequent layer.
-
-A more efficient model variant DenseNet-BC (DenseNet-Bottleneck-Compressed) networks are trained. Using the DenseNet-BC-121-32 model as the base model.
-
-Advantages of DenseNet-BC are:
- - Reduced number of parameters
- - Similar or Better performance
- - Better accuracy
- 
- 
- Dense Net architecture as shown in the original paper which shows the connections from each layer to every other layer:
- 
- <p align="center">
-  <img src="https://github.com/snsten/Diabetic-Retinopathy-WebApp/blob/master/data/densenet.jpg">
-</p>
- 
 
 
 ## Requirements Installation

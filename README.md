@@ -3,18 +3,8 @@
 
 ### Proposed Approach : Quantum-Based Deep Convolutional Neural Network for Diabetic Retinopathy Detection. ​
 
-The steps are mentioned below :
+This repository contains code for a web application that utilizes a combination of quantum computing and deep learning techniques to detect and classify diabetic retinopathy progression in retinal images. The application is built using Flask, TensorFlow, and Qiskit, and it includes features such as image classification, data storage, and visualization of analysis results.
 
-Step 1 : Our proposed approach stands at the intersection of cutting-edge quantum computing and the power of convolutional neural networks (CNNs) to address the pressing challenge of Diabetic Retinopathy progression detection.​
-
-Step 2 : With an emphasis on efficiency and accuracy, we've crafted a hybrid model that integrates quantum circuits into a classical CNN framework. The quantum circuits bring forth the capabilities to capture intricate data interactions, while the CNN leverages its image-processing features. ​
-
-Step 3 : Our approach capitalizes on transfer learning, incorporating a pre-trained CNN backbone, and integrates a quantum layer, resulting in a uniquely dynamic architecture. This synergy empowers our model to swiftly and accurately classify Diabetic Retinopathy severity levels. 
-
-Step 4 : By unifying quantum and classical strengths, our solution offers an exciting avenue for early detection, personalized treatment, and furthering medical insights in the realm of Diabetic Retinopathy. Basically, in our model we're using Classification using optimized multiple-qubit gate quantum NN.​
-
-#### This novel solution aims to enhance the accuracy, efficiency, and scalability of disease classification, ultimately leading to early diagnosis and improved patient outcomes.​
-​
 ## Data Description
 
 Dataset consists of retina images taken using fundus photography under a variety of imaging conditions.
@@ -28,7 +18,6 @@ A clinician has rated each image for the severity of diabetic retinopathy on a s
     2 - DR Stage 2
 
     3 - DR Stage 3
-
 
 ## Requirements Installation
 
@@ -60,8 +49,18 @@ CREATE TABLE IF NOT EXISTS public.predicted_data ​
   probability double precision ​
 );​
 ```
-
-### 7. In the "app.py" file with your postgresql username, password and localhost 
+### 7. "OR"​
+```
+CREATE TABLE IF NOT EXISTS public.predicted_data​
+(​
+    id integer NOT NULL DEFAULT nextval('predicted_data_id_seq'::regclass),​
+    image_data text COLLATE pg_catalog."default",​
+    result text COLLATE pg_catalog."default",​
+    probability double precision,​
+    CONSTRAINT predicted_data_pkey PRIMARY KEY (id)​
+)​
+```
+### 8. Create a .env file and create a variable called "OPENAI_API_KEY" and set ​
 
 ## Run the Webapp by executing 
 `python app.py`

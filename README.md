@@ -17,13 +17,7 @@ Dataset consists of retina images taken using fundus photography under a variety
 
 A clinician has rated each image for the severity of diabetic retinopathy on a scale of 0 to 4:
 
-    0 - No DR
-
-    1 - DR Stage 1
-
-    2 - DR Stage 2
-
-    3 - DR Stage 3
+    0 - No DR       1 - DR Stage 1      2 - DR Stage 2      3 - DR Stage 3
 
 ## Requirements Installation
 

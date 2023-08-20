@@ -77,17 +77,62 @@ Upload retinal images for classification and view the predicted results, probabi
 
 #### As we look to the future, the potential for our Quantum-Enhanced CNN model to revolutionize Diabetic Retinopathy classification remains promising. Here are five pivotal avenues we plan ​to explore:​
 
-* Advanced Quantum Architecture : Explore deeper circuits and innovations for heightened accuracy.​
+1. Advanced Quantum Architecture : Explore deeper circuits and innovations for heightened accuracy.​
   
-* Advanced security measures | Ethical and regulatory compliance  : Strengthen data protection through encryption, authentication, and access controls, aligning with HIPAA and industry best practices and regulatory compliance, to safeguard patient data and address privacy concerns effectively.​
+2. Advanced security measures | Ethical and regulatory compliance  : Strengthen data protection through encryption, authentication, and access controls, aligning with HIPAA and industry best practices and regulatory compliance, to safeguard patient data and address privacy concerns effectively.​
   
-* Quantum Robustness Enhancement : Develop strategies to counter quantum noise and enhance reliability.​
+3. Quantum Robustness Enhancement : Develop strategies to counter quantum noise and enhance reliability.​
   
-* Clinical Validation Collaboration : Partner with medical institutions for rigorous accuracy validation.​
+4. Clinical Validation Collaboration : Partner with medical institutions for rigorous accuracy validation.​
   
-* Quantum Hardware Progress : Utilize evolving quantum hardware for speed and precision gains.​
+5. Quantum Hardware Progress : Utilize evolving quantum hardware for speed and precision gains.​
 
 Through these strategic directions, we aim to unlock new dimensions in Diabetic Retinopathy classification and contribute to advancements in healthcare diagnostics.​
 
 ​
+## Landing Page
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/d455e50a-b477-4b8e-9b63-4df387c5ce60)
+
+## Database
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/27849f88-7b1c-48a2-baca-2e18823773bb)
+
+## Home Page 
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/28fe3333-baa5-419d-a26c-005c045b34da)
+
+## Upload Image 
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/8610a15d-fef0-4017-9e80-f24507eb3ed8)
+
+## Preview Images
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/33352291-88aa-42ad-89e0-7350cdbbf083)
+
+## Clicked on "View Results" at bottom
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/a252d855-4f99-4219-bce1-3ca6c3f575af)
+
+## Results and Probabilities Data in Tabular Form
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/92b71d27-ee22-498d-bdfc-97007198d6ea)
+
+## Database view after uploading images
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/fd1b3b2d-336e-4fb4-9fa5-db3b8cecca74)
+
+## Enter 'Name' and 'Age' for patient specific remediation
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/6037480a-73b2-4e54-bc52-fc6e84050c50)
+
+## User specific Remediation
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/6414027a-7d56-42d0-9e99-3a399f090e3b)
+
+## Click on 'View Graphs'
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/252b0140-2976-4309-959c-3d06572b3448)
+
+## Graphical Results of all Patients
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/b732545d-2a9a-4c3c-b881-806ad9b6e53e)
+
+
+
+
+
+
+
+
+
+
 

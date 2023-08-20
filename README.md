@@ -75,7 +75,25 @@ venv\Scripts\activate​
 ```
 ### 3. Install the required packages from the requirements.txt file:​
 `pip install -r requirements.txt​`
+
 ### 4. Create a database in postgreSQL with name -> "diabeticRetinopathy"
+​
+### 5. Update the below line -> ​
+
+`app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:<password>@localhost:5432/diabeticRetinopathy'​`
+
+### 6. Run this query in you pgadmin4 to create the required tables ->​
+```
+CREATE TABLE IF NOT EXISTS public.predicted_data ​
+( ​
+  id serial PRIMARY KEY, ​
+  image_data text, ​
+  result text, ​
+  probability double precision ​
+);​
+```
+
+### 7. In the "app.py" file with your postgresql username, password and localhost 
 
 ## Run the Webapp by executing 
 `python app.py`

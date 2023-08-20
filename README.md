@@ -11,6 +11,10 @@ Quantum computing offers a promising avenue for addressing the computational cha
 
 This repository contains code for a web application that utilizes a combination of quantum computing and deep learning techniques to detect and classify diabetic retinopathy progression in retinal images. The application is built using Flask, TensorFlow, and Qiskit, and it includes features such as image classification, data storage, and visualization of analysis results.
 
+## Dataset Used : 
+<p> https://www.kaggle.com/c/aptos2019-blindness-detection/data​ </p>
+
+
 ## Data Description
 
 Dataset consists of retina images taken using fundus photography under a variety of imaging conditions.

@@ -62,7 +62,7 @@ Advantages of DenseNet-BC are:
  
 
 
-## Requirements Insatallation
+## Requirements Installation
 
 ### 1. Clone the repository to your local machine:​
 ```

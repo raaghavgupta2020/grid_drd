@@ -230,7 +230,7 @@ async function remediate(input1Value, input2Value, existingResult, existingProba
   // console.log("hey3 = "+existingProbability);
   // console.log("hey4 = "+existingResult);
 
-  var inputText = "There is a patient "+input1Value+" whose age is "+input2Value+" ,his eye image is uploaded in a ML model which detects if the person has diabetic retinopathy, the severity comes out to be "+existingResult+" with a probability of correctness of ML model equals to "+existingProbability+" ,now generate remediation steps in 80-100 words";
+  var inputText = "There is a patient "+input1Value+" whose age is "+input2Value+" ,his eye image is uploaded in a ML model which detects if the person has diabetic retinopathy, the severity comes out to be "+existingResult+" with a probability of correctness of ML model equals to "+existingProbability+" ,now generate remediation steps in 80 words";
   // var inputText = "raghav gupta";
   // console.log(inputText);
 

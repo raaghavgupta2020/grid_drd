@@ -18,14 +18,14 @@
           <td>{{ entry.image_data }}</td>
 
           <td>
-            {% if entry.result == 'Mild' %}
-                <span class="badge badge-warning">Mild</span>
-            {% elif entry.result == 'Severe' %}
-                <span class="badge badge-danger">Severe</span>
-            {% elif entry.result == 'Moderate' %}
-                <span class="badge badge-warning">Moderate</span>
-            {% elif entry.result == 'No DR' %}
-                <span class="badge badge-info">No DR</span>
+            {% if entry.result == 'DR Stage 1' %}
+                <span class="badge badge-warning">DR Stage 1</span>
+            {% elif entry.result == 'DR Stage 3' %}
+                <span class="badge badge-danger">DR Stage 3</span>
+            {% elif entry.result == 'DR Stage 2' %}
+                <span class="badge badge-warning">DR Stage 2</span>
+            {% elif entry.result == 'Healthy Retina' %}
+                <span class="badge badge-info">Healthy Retina</span>
             {% endif %}
           </td>
           

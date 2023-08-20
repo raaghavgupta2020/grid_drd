@@ -132,7 +132,7 @@ def predict():
         pred_proba = "{:.3f}".format(np.amax(preds))    # Max probability
         pred_class = np.argmax(np.squeeze(preds))
 
-        diagnosis = ["No DR", "Mild", "Moderate", "Severe", "Proliferative DR"]
+        diagnosis = ["Healthy Retina", "DR Stage 1", "DR Stage 2", "DR Stage 3", "Proliferative DR"]
 
         result = diagnosis[pred_class]               # Convert to string
         

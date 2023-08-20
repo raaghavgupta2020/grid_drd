@@ -31,7 +31,7 @@
 
       if (chartData) {
         // Generate the prompt using the chart data
-        const prompt = `The analysis shows that among all patients, the distribution of diabetic retinopathy severity levels is as follows: Mild - ${chartData['Mild']}, Moderate - ${chartData['Moderate']}, Severe - ${chartData['Severe']}, No DR - ${chartData['No DR']}. Provide an overall summary of the analysis by the ML mdoel in 100 words.`;
+        const prompt = `The analysis shows that among all patients, the distribution of diabetic retinopathy severity levels is as follows: Mild - ${chartData['DR Stage 1']}, Moderate - ${chartData['DR Stage 2']}, Severe - ${chartData['DR Stage 3']}, No DR - ${chartData['Healthy Retina']}. Provide an overall summary of the analysis by the ML model in 180 words.`;
 
         // Fetch summary response from the server
         const response = await fetch('/generate_response', {

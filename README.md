@@ -94,6 +94,7 @@ Upload retinal images for classification and view the predicted results, probabi
 Through these strategic directions, we aim to unlock new dimensions in Diabetic Retinopathy classification and contribute to advancements in healthcare diagnostics.​
 
 ### ML Model Architecture
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/202cddda-a81d-4167-b96c-89eae917a8e8)
 
 ### Application screenshots
 

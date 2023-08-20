@@ -96,7 +96,7 @@ Through these strategic directions, we aim to unlock new dimensions in Diabetic 
 ### Application screenshots
 
 ### Landing Page
-[image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/d455e50a-b477-4b8e-9b63-4df387c5ce60)
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/d455e50a-b477-4b8e-9b63-4df387c5ce60)
 
 ### Database
 ![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/27849f88-7b1c-48a2-baca-2e18823773bb)

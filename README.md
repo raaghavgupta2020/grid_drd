@@ -35,13 +35,11 @@ A clinician has rated each image for the severity of diabetic retinopathy on a s
 
     0 - No DR
 
-    1 - Mild
+    1 - DR Stage 1
 
-    2 - Moderate
+    2 - DR Stage 2
 
-    3 - Severe
-
-    4 - Proliferative DR
+    3 - DR Stage 3
 
 ## About the Model used for prediction
 ### Densely Connected Convolutional Networks or DenseNet 
@@ -61,16 +59,23 @@ Advantages of DenseNet-BC are:
  <p align="center">
   <img src="https://github.com/snsten/Diabetic-Retinopathy-WebApp/blob/master/data/densenet.jpg">
 </p>
+ 
+
 
 ## Requirements Insatallation
-### Using conda or virtualenv
+
+### 1. Clone the repository to your local machine:​
 ```
-virtualenv venv
-source /bin/activate
-python -m pip install -r requirements.txt
+git clone https://github.com/raaghavgupta2020/grid_drd​
 ```
-### Direct (Not recommended)
-`python -m pip install -r requirements.txt`
+### 2. Create a virtual environment and activate it:​
+```
+python -m venv venv​
+venv\Scripts\activate​
+```
+### 3. Install the required packages from the requirements.txt file:​
+`pip install -r requirements.txt​`
+### 4. Create a database in postgreSQL with name -> "diabeticRetinopathy"
 
 ## Run the Webapp by executing 
 `python app.py`

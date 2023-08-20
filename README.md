@@ -73,3 +73,21 @@ https://www.maisieai.com/help/how-to-get-an-openai-api-key-for-chatgpt​
 Access the web application by opening your web browser and navigating to `http://localhost:5000`​
 Upload retinal images for classification and view the predicted results, probabilities, and recommendations for remediation.​
 
+## Future Scope : 
+
+#### As we look to the future, the potential for our Quantum-Enhanced CNN model to revolutionize Diabetic Retinopathy classification remains promising. Here are five pivotal avenues we plan ​to explore:​
+
+* Advanced Quantum Architecture : Explore deeper circuits and innovations for heightened accuracy.​
+  
+* Advanced security measures | Ethical and regulatory compliance  : Strengthen data protection through encryption, authentication, and access controls, aligning with HIPAA and industry best practices and regulatory compliance, to safeguard patient data and address privacy concerns effectively.​
+  
+* Quantum Robustness Enhancement : Develop strategies to counter quantum noise and enhance reliability.​
+  
+* Clinical Validation Collaboration : Partner with medical institutions for rigorous accuracy validation.​
+  
+* Quantum Hardware Progress : Utilize evolving quantum hardware for speed and precision gains.​
+
+Through these strategic directions, we aim to unlock new dimensions in Diabetic Retinopathy classification and contribute to advancements in healthcare diagnostics.​
+
+​
+

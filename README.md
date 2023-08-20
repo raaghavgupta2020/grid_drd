@@ -1,5 +1,23 @@
-# Diabetic Retinopathy Web App
-Webapp for classification of Diabetic Retinopathy from retinal images.
+
+# Diabetic Retinopathy using Quantum Computing​ Web Application
+
+### Proposed Approach : Quantum-Based Deep Convolutional Neural Network for Diabetic Retinopathy Detection. ​
+
+
+All steps are mentioned below-​
+
+
+1. Our proposed approach stands at the intersection of cutting-edge quantum computing and the power of convolutional neural networks (CNNs) to address the pressing challenge of Diabetic Retinopathy progression detection.​
+
+2. With an emphasis on efficiency and accuracy, we've crafted a hybrid model that integrates quantum circuits into a classical CNN framework. The quantum circuits bring forth the capabilities to capture intricate data interactions, while the CNN leverages its image-processing features. ​
+
+​3. Our approach capitalizes on transfer learning, incorporating a pre-trained CNN backbone, and integrates a quantum layer, resulting in a uniquely dynamic architecture. This synergy empowers our model to swiftly and accurately classify Diabetic Retinopathy severity levels. ​
+
+​4. By unifying quantum and classical strengths, our solution offers an exciting avenue for early detection, personalized treatment, and furthering medical insights in the realm of Diabetic Retinopathy. Basically, in our model we're using Classification using optimized multiple-qubit gate quantum NN.​
+
+#### This novel solution aims to enhance the accuracy, efficiency, and scalability of disease classification, ultimately leading to early diagnosis and improved patient outcomes.​
+​
+For classification of Diabetic Retinopathy from retinal images : 
 <p align="center">
   <img src="https://github.com/snsten/Diabetic-Retinopathy-WebApp/blob/master/data/prediction.jpg">
 </p>

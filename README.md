@@ -1,6 +1,12 @@
 
 # Diabetic Retinopathy using Quantum Computing​ Web Application
 
+Diabetic retinopathy is a significant concern in India, often referred to as the "diabetic capital," where the prevalence of diabetes is on the rise. Over the next two to three decades, the number of diabetes cases is projected to double. Diabetic retinopathy, an outcome of diabetes, can lead to vision impairment and even blindness, substantially reducing an individual's quality of life.
+
+This condition is characterized by microvascular retinal changes and can be averted through early detection and timely intervention. However, the early detection process requires computationally intensive tasks such as image screening and classification. This is where the intersection of quantum computing and conventional image classification methods comes into play.
+
+Quantum computing offers a promising avenue for addressing the computational challenges of image classification due to its ability to perform complex calculations much faster than classical computers. By integrating quantum computing with deep learning techniques, it becomes theoretically feasible to achieve higher accuracy in diabetic retinopathy classification. It is a great solution for rural areas (Tier 4 cities), which has small dispensaries and can afford a fundus camera, but don’t have expert medical professionals available.
+
 ### Proposed Approach : Quantum-Based Deep Convolutional Neural Network for Diabetic Retinopathy Detection.
 
 This repository contains code for a web application that utilizes a combination of quantum computing and deep learning techniques to detect and classify diabetic retinopathy progression in retinal images. The application is built using Flask, TensorFlow, and Qiskit, and it includes features such as image classification, data storage, and visualization of analysis results.

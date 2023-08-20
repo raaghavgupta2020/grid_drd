@@ -93,51 +93,49 @@ Upload retinal images for classification and view the predicted results, probabi
 
 Through these strategic directions, we aim to unlock new dimensions in Diabetic Retinopathy classification and contribute to advancements in healthcare diagnostics.​
 
+### ML Model Architecture
+
 ### Application screenshots
 
 ### Landing Page
-![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/d455e50a-b477-4b8e-9b63-4df387c5ce60)
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/f34c9bb3-6136-48ea-8c0b-8619533cc0cb)
 
 ### Database
-![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/27849f88-7b1c-48a2-baca-2e18823773bb)
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/e0549564-1182-4160-b876-89855f9ea62d)
+
 
 ### Home Page 
-![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/28fe3333-baa5-419d-a26c-005c045b34da)
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/509919cd-107e-4669-9852-094da9b77687)
 
 ### Upload Image 
-![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/8610a15d-fef0-4017-9e80-f24507eb3ed8)
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/1aea876d-eb81-450d-ab3a-ab008e08786f)
 
 ### Preview Images
-![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/33352291-88aa-42ad-89e0-7350cdbbf083)
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/0bc3bd17-895c-4dd1-8bfc-2d17e047a4a8)
 
 ### Clicked on "View Results" at bottom
-![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/a252d855-4f99-4219-bce1-3ca6c3f575af)
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/d3d3fcfa-0db0-47d6-aa6a-518890762590)
 
 ### Results and Probabilities Data in Tabular Form
-![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/92b71d27-ee22-498d-bdfc-97007198d6ea)
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/6179e609-0f06-4520-8862-fd0a70a4e102)
 
 ### Database view after uploading images
-![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/fd1b3b2d-336e-4fb4-9fa5-db3b8cecca74)
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/ce4e3a7f-018c-42ec-b155-bbc3868f161e)
 
 ### Enter 'Name' and 'Age' for patient specific remediation
-![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/6037480a-73b2-4e54-bc52-fc6e84050c50)
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/fc4ea0d3-8b78-46ca-b150-c137e9e0024d)
 
 ### User specific Remediation
-![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/6414027a-7d56-42d0-9e99-3a399f090e3b)
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/7c48eac1-1dc2-4b49-a150-c0141a9f1b68)
 
 ### Click on 'View Graphs'
-![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/252b0140-2976-4309-959c-3d06572b3448)
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/5e12ee3c-af9d-4e30-b4b9-217e14adea53)
 
 ### Graphical Results of all Patients
-![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/b732545d-2a9a-4c3c-b881-806ad9b6e53e)
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/404a8545-9658-4111-9c19-7ab5d708a137)
 
 ### Analysis of Graph using LangeChain LLM 
-![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/9ddc842c-cace-406d-8651-261cc4fcf15c)
-
-
-
-
-
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/39bc2832-e233-4f56-8c35-877d2b7a9cc8)
 
 
 

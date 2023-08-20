@@ -43,13 +43,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
 # Creating a new Flask Web application.
 app = Flask(__name__)
 
 # Model saved with Keras model.save()
 MODEL_PATH = './models/pretrained/model.h5'
-# MODEL_PATH = './models/pretrained/DenseNet-BC-121-32-no-top.h5'
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:raghavguptapostgresql@localhost:5432/diabeticRetinopathy'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -87,11 +85,6 @@ class PredictedData(db.Model):
 
 def model_predict(img, model):
     """
-    Classify the severity of DR of image using pre-trained CNN model.
-
-    Keyword arguments:
-    img -- the retinal image to be classified
-    model -- the pretrained CNN model used for prediction
 
     Predicted rating of severity of diabetic retinopathy on a scale of 0 to 4:
 

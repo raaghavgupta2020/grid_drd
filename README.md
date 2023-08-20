@@ -1,5 +1,5 @@
 # Diabetic Retinopathy Web App
-Webapp for classification of Diabetic Retinopathy from retinal images using flask and keras.
+Webapp for classification of Diabetic Retinopathy from retinal images.
 <p align="center">
   <img src="https://github.com/snsten/Diabetic-Retinopathy-WebApp/blob/master/data/prediction.jpg">
 </p>
@@ -51,16 +51,10 @@ Advantages of DenseNet-BC are:
 ```
 virtualenv venv
 source /bin/activate
-python3 -m pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 ### Direct (Not recommended)
-`python3 -m pip install -r requirements.txt`
+`python -m pip install -r requirements.txt`
 
 ## Run the Webapp by executing 
-`python3 app.py`
-
-## Refrences
-- [Diabetic Retinopathy Wikipedia](https://en.wikipedia.org/wiki/Diabetic_retinopathy)
-- [Diabetic Retinopathy National Eye Institute](https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/diabetic-retinopathy)
-- [Fundus Image Dataset from Kaggle](https://www.kaggle.com/c/aptos2019-blindness-detection/data)
-- [Densely Connected Convolutional Networks (DenseNets)](https://github.com/liuzhuang13/DenseNet)
+`python app.py`

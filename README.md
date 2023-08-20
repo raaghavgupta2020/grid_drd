@@ -66,7 +66,7 @@ Refer to this link for the same :​
 https://www.maisieai.com/help/how-to-get-an-openai-api-key-for-chatgpt​
 `
 
-​### 9. Run the Flask application : ​
+### 9. Run the Flask application : ​
 
 `python app.py​`
 
@@ -89,7 +89,7 @@ Upload retinal images for classification and view the predicted results, probabi
 
 Through these strategic directions, we aim to unlock new dimensions in Diabetic Retinopathy classification and contribute to advancements in healthcare diagnostics.​
 
-​## Application Screenshots
+### Application screenshots
 
 ### Landing Page
 ![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/d455e50a-b477-4b8e-9b63-4df387c5ce60)

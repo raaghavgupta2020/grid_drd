@@ -1,7 +1,7 @@
 
 # Diabetic Retinopathy using Quantum Computing​ Web Application
 
-### Proposed Approach : Quantum-Based Deep Convolutional Neural Network for Diabetic Retinopathy Detection. ​
+### Proposed Approach : Quantum-Based Deep Convolutional Neural Network for Diabetic Retinopathy Detection.
 
 This repository contains code for a web application that utilizes a combination of quantum computing and deep learning techniques to detect and classify diabetic retinopathy progression in retinal images. The application is built using Flask, TensorFlow, and Qiskit, and it includes features such as image classification, data storage, and visualization of analysis results.
 
@@ -89,42 +89,46 @@ Upload retinal images for classification and view the predicted results, probabi
 
 Through these strategic directions, we aim to unlock new dimensions in Diabetic Retinopathy classification and contribute to advancements in healthcare diagnostics.​
 
-​
-## Landing Page
+​## Application Screenshots
+
+### Landing Page
 ![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/d455e50a-b477-4b8e-9b63-4df387c5ce60)
 
-## Database
+### Database
 ![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/27849f88-7b1c-48a2-baca-2e18823773bb)
 
-## Home Page 
+### Home Page 
 ![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/28fe3333-baa5-419d-a26c-005c045b34da)
 
-## Upload Image 
+### Upload Image 
 ![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/8610a15d-fef0-4017-9e80-f24507eb3ed8)
 
-## Preview Images
+### Preview Images
 ![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/33352291-88aa-42ad-89e0-7350cdbbf083)
 
-## Clicked on "View Results" at bottom
+### Clicked on "View Results" at bottom
 ![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/a252d855-4f99-4219-bce1-3ca6c3f575af)
 
-## Results and Probabilities Data in Tabular Form
+### Results and Probabilities Data in Tabular Form
 ![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/92b71d27-ee22-498d-bdfc-97007198d6ea)
 
-## Database view after uploading images
+### Database view after uploading images
 ![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/fd1b3b2d-336e-4fb4-9fa5-db3b8cecca74)
 
-## Enter 'Name' and 'Age' for patient specific remediation
+### Enter 'Name' and 'Age' for patient specific remediation
 ![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/6037480a-73b2-4e54-bc52-fc6e84050c50)
 
-## User specific Remediation
+### User specific Remediation
 ![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/6414027a-7d56-42d0-9e99-3a399f090e3b)
 
-## Click on 'View Graphs'
+### Click on 'View Graphs'
 ![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/252b0140-2976-4309-959c-3d06572b3448)
 
-## Graphical Results of all Patients
+### Graphical Results of all Patients
 ![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/b732545d-2a9a-4c3c-b881-806ad9b6e53e)
+
+### Analysis of Graph using LangeChain LLM 
+![image](https://github.com/raaghavgupta2020/grid_drd/assets/59497482/9ddc842c-cace-406d-8651-261cc4fcf15c)
 
 
 
